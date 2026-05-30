@@ -1,6 +1,6 @@
 # js-MUNDO_INVERTIDO
 
-[![Deploy](https://github.com/alancostaoliveira/js-MUNDO_INVERTIDO/actions/workflows/deploy.yml/badge.svg)](https://github.com/alancostaoliveira/js-MUNDO_INVERTIDO/actions/workflows/deploy.yml) [![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://alancostaoliveira.github.io/js-MUNDO_INVERTIDO/)
+[![Deploy](https://github.com/alancostaoliveira/js-MUNDO_INVERTIDO/actions/workflows/deploy.yml/badge.svg)](https://github.com/alancostaoliveira/js-MUNDO_INVERTIDO/actions/workflows/deploy.yml) [![Demo](https://img.shields.io/badge/demo-GitHub%20Pages-blue)](https://alancostaoliveira.github.io/js-MUNDO_INVERTIDO/) [![Uptime](https://img.shields.io/website?down_color=red&down_message=down&label=uptime&style=flat&up_message=up&url=https%3A%2F%2Falancostaoliveira.github.io%2Fjs-MUNDO_INVERTIDO%2F)](https://alancostaoliveira.github.io/js-MUNDO_INVERTIDO/)
 
 <p align="center">
   <img width="300" src="https://micheleambrosio.github.io/semana-frontend-mundo-invertido/assets/images/banner/logo.svg">
