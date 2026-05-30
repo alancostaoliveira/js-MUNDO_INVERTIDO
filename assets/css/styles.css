@@ -1,0 +1,214 @@
+/*** VARIABLES & THEMES ***/
+:root {
+  --primary-color: #cf0f0f;
+  --primary-color-contrast: #ffffff;
+  --field-background-color: #000000;
+  --page-background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #ffffff 65%,
+    rgba(255, 255, 255, 0.75) 100%
+  );
+  --header-background-color: #e3e3e3;
+  --highlight-color: #000000;
+  --featured-font-family: 'Archivo', sans-serif;
+  --character-top-image-src: url('../images/characters/kids-on-the-bike.svg');
+  --character-top-image-color: #ffffff;
+  --character-bottom-image-src: url('../images/characters/inverted-world-monster.svg');
+  --character-bottom-image-color: #e5e5e5;
+  --background-lamp-image: url('../images/backgrounds/lamps.png');
+  --footer-background-color: #b5bbbf;
+}
+
+.dark-theme {
+  --page-background: linear-gradient(
+    180deg,
+    #050000 0%,
+    #130404 65%,
+    rgba(19, 1, 1, 0.75) 100%
+  );
+  --header-background-color: #220f0f;
+  --highlight-color: #ffffff;
+  --featured-font-family: 'Rubik Glitch', sans-serif;
+  --character-bottom-image-src: url('../images/characters/kids-on-the-bike.svg');
+  --character-bottom-image-color: rgba(255, 255, 255, 0.1);
+  --character-top-image-src: url('../images/characters/inverted-world-monster.svg');
+  --character-top-image-color: #000000;
+  --background-lamp-image: url('../images/backgrounds/lamps-inverted.png');
+  --footer-background-color: #000000;
+}
+
+/* Base reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+  font-family:
+    system-ui,
+    Segoe UI,
+    Roboto,
+    Arial,
+    Helvetica,
+    sans-serif;
+  background: var(--page-background);
+  color: var(--highlight-color);
+}
+
+header {
+  background: var(--header-background-color);
+  padding: 2rem 1rem;
+  border-bottom: 4px solid rgba(0, 0, 0, 0.06);
+}
+.header-content {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.header-content img {
+  width: 180px;
+  max-width: 40vw;
+}
+.header-content p {
+  flex: 1;
+  color: var(--highlight-color);
+  line-height: 1.35;
+}
+#switch-theme-button {
+  background: var(--primary-color);
+  color: var(--primary-color-contrast);
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+main {
+  max-width: 1100px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+.container {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.section-texts {
+  flex: 1;
+}
+.section-texts h1,
+.section-texts h2 {
+  font-family: var(--featured-font-family);
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+.section-texts p {
+  color: var(--highlight-color);
+  opacity: 0.95;
+}
+
+.video-frame iframe {
+  border-radius: 8px;
+  display: block;
+}
+
+.gallery-container {
+  list-style: none;
+  display: flex;
+  gap: 0.75rem;
+}
+.gallery-image img {
+  width: 220px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.form-content {
+  background: rgba(0, 0, 0, 0.06);
+  padding: 1rem;
+  border-radius: 8px;
+}
+.form-container form {
+  display: grid;
+  gap: 0.5rem;
+}
+label {
+  font-weight: 600;
+}
+input,
+textarea {
+  padding: 0.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  border-radius: 6px;
+  background: var(--field-background-color);
+  color: var(--highlight-color);
+}
+button#btnSubscribe {
+  background: transparent;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+  padding: 0.6rem 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+footer {
+  background: var(--footer-background-color);
+  padding: 1.5rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+/* Helpers */
+.world-characters {
+  position: absolute;
+  pointer-events: none;
+}
+.invert-element {
+  filter: none;
+  transition: filter 0.4s ease;
+}
+
+@media (max-width: 800px) {
+  .header-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .gallery-container {
+    flex-direction: column;
+  }
+  .gallery-image img {
+    width: 100%;
+    height: auto;
+  }
+  .container {
+    flex-direction: column;
+  }
+}
+
+/* Accessibility focus styles */
+:focus {
+  outline: 3px solid rgba(207, 15, 15, 0.25);
+  outline-offset: 2px;
+}
+
+/* Small visually-hidden utility */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
